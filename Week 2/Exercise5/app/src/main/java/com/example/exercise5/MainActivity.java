@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         btn_Phone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("tel: 0931785549"));
+                Intent intent = new Intent(Intent.ACTION_APPLICATION_PREFERENCES);
                 startActivity(intent);
             }
         });
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         btn_Setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Settings.ACTION_WIFI_SETTINGS);
+                Intent intent = new Intent(Settings.ACTION_BLUETOOTH_SETTINGS);
                 startActivity(intent);
             }
         });
