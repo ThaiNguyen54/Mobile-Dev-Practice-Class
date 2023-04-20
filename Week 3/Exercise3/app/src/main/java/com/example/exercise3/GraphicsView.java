@@ -5,10 +5,11 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.view.MotionEvent;
 import android.view.View;
 
 public class GraphicsView extends View {
-    Bitmap[] frames = new Bitmap[127];
+    Bitmap[] frames = new Bitmap[128];
     int i = 0;
     public GraphicsView(Context context) {
         super(context);
@@ -144,13 +145,20 @@ public class GraphicsView extends View {
 
     @Override
     protected void onDraw(Canvas canvas) {
-        if (i<6){
+        if (i < 128){
+            canvas.scale(0.75f, 0.8f);
             canvas.drawBitmap(frames[i],40,40, new Paint());
         }
         else {
             i = 0;
         }
         invalidate();
-        super.onDraw(canvas);
+//        super.onDraw(canvas);
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        i++;
+        return true;
     }
 }
