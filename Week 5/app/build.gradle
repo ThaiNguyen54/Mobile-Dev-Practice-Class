@@ -36,4 +36,23 @@ dependencies {
     testImplementation libs.junit
     androidTestImplementation libs.androidx.test.ext.junit
     androidTestImplementation libs.espresso.core
+
+    def leanback_version = "1.2.0-alpha02"
+
+    implementation libs.androidx.leanback
+
+    // leanback-preference is an add-on that provides a settings UI for TV apps.
+    implementation libs.androidx.leanback.preference
+
+    // leanback-paging is an add-on that simplifies adding paging support to a RecyclerView Adapter.
+    implementation libs.androidx.leanback.paging
+
+    // leanback-tab is an add-on that provides customized TabLayout to be used as the top navigation bar.
+    implementation libs.androidx.leanback.tab
+
+    implementation 'com.squareup.picasso:picasso:1.1.1'
+
+    def lifecycle_version = "2.4.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
 }

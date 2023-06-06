@@ -11,6 +11,7 @@ public class ExerciseList extends AppCompatActivity {
 
     Button btn_ex1;
     Button btn_ex2;
+    Button btn_TV_Android;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +19,7 @@ public class ExerciseList extends AppCompatActivity {
 
         btn_ex1 = (Button) findViewById(R.id.btn_ex1);
         btn_ex2 = (Button) findViewById(R.id.btn_ex2);
+        btn_TV_Android = (Button) findViewById(R.id.btn_TV_Android);
 
         btn_ex1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,6 +34,15 @@ public class ExerciseList extends AppCompatActivity {
             public void onClick(View v) {
                 Intent ex2Intent = new Intent(ExerciseList.this, Exercise2.class);
                 startActivity(ex2Intent);
+            }
+        });
+
+        btn_TV_Android.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent TVAndroidAppIntent = new Intent(ExerciseList.this, TVAndroidApp.class);
+                startActivity(TVAndroidAppIntent);
+
             }
         });
     }
